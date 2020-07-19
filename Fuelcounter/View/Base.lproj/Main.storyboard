@@ -48,7 +48,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="History"/>
                                         <connections>
-                                            <segue destination="kjP-c0-Wic" kind="show" id="bxh-LM-v3R"/>
+                                            <segue destination="QK0-o1-Nd0" kind="show" identifier="mainTohistory" id="LL4-2u-PFs"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -155,18 +155,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Ahj-Mn-lmV"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Hl4-ld-5SN">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="Wc7-OJ-AAx">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8WW-O6-PaD">
-                                <rect key="frame" x="348" y="7" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="test:" destination="kjP-c0-Wic" eventType="touchUpInside" id="134-BX-GeV"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="Hl4-ld-5SN"/>
                     <connections>
                         <outlet property="tableView" destination="RVH-jt-0jj" id="CHt-ra-OBe"/>
                     </connections>
@@ -223,6 +212,7 @@
                         <outlet property="tableView" destination="ADj-Zn-r8A" id="Dko-v8-qsP"/>
                         <segue destination="dPO-qN-C67" kind="show" identifier="transportNaarNieuweMeeting" id="2Nm-3L-nw6"/>
                         <segue destination="tCa-6f-elf" kind="show" identifier="voertuigdetails" id="KpQ-HB-zfE"/>
+                        <segue destination="kjP-c0-Wic" kind="show" identifier="TransportNaarHistory" id="fzK-cS-dXj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jnh-Ub-G7j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -526,7 +516,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="KpQ-HB-zfE"/>
-        <segue reference="CJ7-S0-CIC"/>
+        <segue reference="hpA-b8-K4M"/>
+        <segue reference="LL4-2u-PFs"/>
     </inferredMetricsTieBreakers>
 </document>

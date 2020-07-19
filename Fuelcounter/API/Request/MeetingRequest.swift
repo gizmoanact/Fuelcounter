@@ -42,6 +42,41 @@ struct MeetingRequest{
     
 }
 
+
+struct MeetingByIdRequest{
+    let resourceURL:URL
+    init(id :Int){
+         let resourceString = "http://localhost:5000/api/Meeting?id="+String(id) // later \(var) voor generiek te maken
+        print(resourceString)
+        guard let resourceURL = URL(string: resourceString) else {fatalError()}
+        self.resourceURL = resourceURL
+    }//hier dan de keuze var zetten in meetegeven parameters
+    
+    func getMeeting( completion: @escaping(Result<[Jmeetingen],GetError>)->Void){
+        
+        let dataTask = URLSession.shared.dataTask(with: resourceURL){data,_,_ in
+            guard let jsonData = data else{
+                completion(.failure(.noDataAvailable))
+                return
+            }
+            do{
+
+                let decoder = JSONDecoder()
+                print(jsonData.count);
+                let MeetingRes = try decoder.decode([Jmeetingen].self, from: jsonData)
+                //let transportdetails = TransportRes.respons
+                completion(.success(MeetingRes))
+            }catch{
+                completion(.failure(.canNotProcessData))
+            }
+        }
+        dataTask.resume()
+    }
+   
+    
+    
+}
+
 class addMeetingRequest{
     /*
     @State private var confirmationMessage=""

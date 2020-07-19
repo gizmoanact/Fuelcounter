@@ -23,12 +23,14 @@ public class historyController: UIViewController, UITableViewDelegate, UITableVi
     var listOfMeeting = [Jmeetingen]()
      var meetingen: [String] = []
     
+    var gekozenVoertuig = Jtransports()
+    
     let cellReuseIdentifier = "cell"
    
     //functions
     public override func viewDidLoad()->Void{
         //print("okeoke");
-        
+        print(gekozenVoertuig.naam);
         getTransportsFromApi();
         getMeetingenFromApi();
         
@@ -69,7 +71,7 @@ public class historyController: UIViewController, UITableViewDelegate, UITableVi
 
     func getMeetingenFromApi(){
                    do{
-                      let mRequest = MeetingRequest()
+                    let mRequest = MeetingByIdRequest(id:self.gekozenVoertuig.id)
                     mRequest.getMeeting{[weak self] result in
                           switch result{
                           case .failure(let error):
@@ -78,7 +80,7 @@ public class historyController: UIViewController, UITableViewDelegate, UITableVi
                         self!.listOfMeeting = me
                               for m in self!.listOfMeeting{
                                 print("oke" + String(m.iDvervoer))
-                                self!.meetingen.append(String(m.datum.prefix(10)) + " verbuik: " + String(m.verbruik) + listOfTransport.first{})
+                                self!.meetingen.append(String(m.datum.prefix(10)) + " verbuik: " + String(m.verbruik))
                                    self!.tableView.reloadData()
                            }
                           }

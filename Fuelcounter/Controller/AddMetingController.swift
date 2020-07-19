@@ -17,12 +17,12 @@ public class addMetingController:UIViewController {
     @IBOutlet var dateMeeting: UIDatePicker!
     
     // variabelen
-    var gekozenVoergtuig = Jtransports()
+    var gekozenVoertuig = Jtransports()
     
     //functions
     public override func viewDidLoad()->Void{
         super.viewDidLoad()
-        aantalLiterTxtF.text = gekozenVoergtuig.naam;
+        aantalLiterTxtF.text = gekozenVoertuig.naam;
         //set up picker
        
     //init testers
@@ -41,8 +41,8 @@ public class addMetingController:UIViewController {
         let akm:String = aantalKmTxtF.text!
         let al:String = aantalLiterTxtF.text!
         
-        let nieuwe = meeting( datum: dateMeeting.date, IDvoertuig : gekozenVoergtuig.id , km: (akm as NSString).doubleValue , verbruikte: (al as NSString).doubleValue)
-         let nieuweuploadable = Uplaodmeeting(IDvervoer: gekozenVoergtuig.id, km: (akm as NSString).doubleValue, verbruik: (al as NSString).doubleValue)
+        let nieuwe = meeting( datum: dateMeeting.date, IDvoertuig : gekozenVoertuig.id , km: (akm as NSString).doubleValue , verbruikte: (al as NSString).doubleValue)
+         let nieuweuploadable = Uplaodmeeting(IDvervoer: gekozenVoertuig.id, km: (akm as NSString).doubleValue, verbruik: (al as NSString).doubleValue)
         let adder = addMeetingRequest(m: nieuweuploadable)
         _ = navigationController?.popToRootViewController(animated: true)
     }

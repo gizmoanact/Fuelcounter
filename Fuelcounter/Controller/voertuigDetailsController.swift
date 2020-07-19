@@ -24,7 +24,7 @@ public class voertuigDetailsController : UIViewController {
     var listOfTransport = [Jtransports]()
     
     // variabelen
-    var gekozenVoergtuig = Jtransports()
+    var gekozenVoertuig = Jtransports()
     
     //functions
     public override func viewDidLoad()->Void{
@@ -34,11 +34,11 @@ public class voertuigDetailsController : UIViewController {
     //init testers
     print("okeoke")
         getTransportsFromApi()
-            naamlbl.text =  gekozenVoergtuig.naam
-            typelbl.text = gekozenVoergtuig.type
-            kmlbl.text =  String(gekozenVoergtuig.km)
-            gemverlbl.text = String(gekozenVoergtuig.gemverbruik)// haal alle data om gemiddelde te maken 
-            //bouwjaarlbl.text = String(gekozenVoergtuig.bouwjaar)
+            naamlbl.text =  gekozenVoertuig.naam
+            typelbl.text = gekozenVoertuig.type
+            kmlbl.text =  String(gekozenVoertuig.km)
+            gemverlbl.text = String(gekozenVoertuig.gemverbruik)// haal alle data om gemiddelde te maken
+            //bouwjaarlbl.text = String(gekozenVoertuig.bouwjaar)
 
     }
     func getTransportsFromApi(){

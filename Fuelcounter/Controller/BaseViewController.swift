@@ -22,9 +22,11 @@ public class BaseViewController: UIViewController {
    
     }
     public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+          let tc = segue.destination as! transportTableViewController
         if (segue.identifier == "nieuweMeeting") {
-            let tc = segue.destination as! transportTableViewController
             tc.volgendeView = "Nieuwemeeting"
+        }else if(segue.identifier == "mainTohistory"){
+            tc.volgendeView = "TransportNaarHistory"
         }
     }
     @IBAction func test(_ sender: UIButton) {
