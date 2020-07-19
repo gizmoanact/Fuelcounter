@@ -97,10 +97,10 @@ public class transportTableViewController:UIViewController, UITableViewDelegate,
                    self!.listOfTransport = tr
                   // print("perfect")
                   // print(self!.listOfTransport[0].naam)
-                
+                let emojiArray = ["🚘","🚖","🛵","🏍","🚲","🛴","🚛","🚚","🚐","🚒","🚑","🚓","🏎","🚎","🚌","🚙","🚕","🚗"]
                    for t in self!.listOfTransport{
-                   // print("oke" + t.naam)
-                    self!.voertuigen.append(t.naam )
+                   var number = Int.random(in: 0 ... 18)
+                    self!.voertuigen.append(t.naam + emojiArray[number] )
                 }
                    self!.tableView.reloadData()
                }
