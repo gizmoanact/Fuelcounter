@@ -11,6 +11,7 @@ import  SQLite3
 
 public class BaseViewController: UIViewController {
 
+    @IBOutlet var btnexit: UIButton!
     var db : OpaquePointer?
 
    public override func viewDidLoad() -> Void {
@@ -20,6 +21,9 @@ public class BaseViewController: UIViewController {
     
     //database
    
+    }
+    @IBAction func exitclick(_ sender: Any) {
+        exit(0)
     }
     public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
           let tc = segue.destination as! transportTableViewController

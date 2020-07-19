@@ -109,26 +109,27 @@ class updateTransportRequest{
     }
     
     public func uploadTransport(n:Jtransports){
-         
+        print(n.naam);
        
        // request.httpBody = encoded
         
         var resourceString:String = "http://localhost:5000/api/Transport/put?" // later \(var) voor generiek te maken
-        resourceString = resourceString + "ID=" + String(nieuwe.id) +  "&"
-        resourceString = resourceString + "naam=" + nieuwe.naam + "&"
-        resourceString = resourceString + "km=" + String(nieuwe.km) + "&"
-        resourceString = resourceString + "gemverbruik=" + String(nieuwe.gemverbruik) + "&"
-        resourceString = resourceString + "bouwjaar=" + String(nieuwe.bouwjaar) + "&"
-        resourceString = resourceString + "type=" + nieuwe.type + "&"
-        resourceString = resourceString + "merk=" + nieuwe.merk + "&"
-        resourceString = resourceString + "model=" + nieuwe.model
+       //localhost:5000/api/Transport/put?ID=1&naam=NELSON&km=321&gemverbruik=321&bouwjaar=2019&type=BENZINE&merk=OKE&model=OKE
+        resourceString = resourceString + "ID=" + String(n.id) +  "&"
+        resourceString = resourceString + "naam=" + n.naam + "&"
+        resourceString = resourceString + "km=" + String(n.km) + "&"
+        resourceString = resourceString + "gemverbruik=" + String(n.gemverbruik) + "&"
+        resourceString = resourceString + "bouwjaar=" + String(n.bouwjaar) + "&"
+        resourceString = resourceString + "type=" + n.type + "&"
+        resourceString = resourceString + "merk=" + n.merk + "&"
+        resourceString = resourceString + "model=" + n.model
         
         print(resourceString)
         let url = URL(string: resourceString.replacingOccurrences(of: " ", with: "%20"))!
         
         var request = URLRequest(url:url)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        //request.httpMethod = "PUT"
+        request.httpMethod = "PUT"
         
         
         URLSession.shared.dataTask(with: request) {

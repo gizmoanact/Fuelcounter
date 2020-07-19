@@ -18,15 +18,18 @@ public class addMetingController:UIViewController {
     
     // variabelen
     var gekozenVoertuig = Jtransports()
-    
+    var listOfMeeting = [Jmeetingen]()
+    var meetingen: [String] = []
+     
     //functions
     public override func viewDidLoad()->Void{
         super.viewDidLoad()
-        aantalLiterTxtF.text = gekozenVoertuig.naam;
+       
+ 
         //set up picker
        
     //init testers
-    print("okeoke")
+   // print("okeoke")
     }
 
     @IBAction func voegmeetingtoe(_ sender: Any) {
@@ -40,14 +43,53 @@ public class addMetingController:UIViewController {
         
         let akm:String = aantalKmTxtF.text!
         let al:String = aantalLiterTxtF.text!
-        
         let nieuwe = meeting( datum: dateMeeting.date, IDvoertuig : gekozenVoertuig.id , km: (akm as NSString).doubleValue , verbruikte: (al as NSString).doubleValue)
          let nieuweuploadable = Uplaodmeeting(IDvervoer: gekozenVoertuig.id, km: (akm as NSString).doubleValue, verbruik: (al as NSString).doubleValue)
         let adder = addMeetingRequest(m: nieuweuploadable)
+        
+        updategemiddelde(al: nieuwe.verbruikte ,km: (akm as NSString).doubleValue)
+        
+         
+        
         _ = navigationController?.popToRootViewController(animated: true)
     }
-   
-         
-         
+    func updategemiddelde(al: Double , km : Double ){
+           var gem: Double = 0
+                         
+                         do{
+                           let mRequest = MeetingByIdRequest(id:self.gekozenVoertuig.id)
+                           mRequest.getMeeting{[weak self] result in
+                                 switch result{
+                                 case .failure(let error):
+                                     print(error)
+                                 case .success(let me):
+                               self!.listOfMeeting = me
+                                     for m in self!.listOfMeeting{
+                                        //print("gem voor " + String(gem) + "verbruik " + String(m.verbruik))
+                                         gem = gem + m.verbruik
+                                       
+                                        print("gem na " + String(gem))
+                                  }
+                                 }
+                            gem = (gem + al) / Double(self!.listOfMeeting.count + 1 )
+                            print("okeoke gem " +  String(gem))
+                            self!.gekozenVoertuig.gemverbruik=gem
+                            self!.gekozenVoertuig.km =  self!.gekozenVoertuig.km + km
+                            let utr : updateTransportRequest = updateTransportRequest()
+                            
+                            utr.uploadTransport(n: self!.gekozenVoertuig)
+                           }
+                          }catch{
+                              // pop up ?
+                              print("Error , no item in database")
+                                }
+    
+                        
+    
+    
+                   
+    
+                     }
+
     
 }

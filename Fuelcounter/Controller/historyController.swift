@@ -17,8 +17,8 @@ public class historyController: UIViewController, UITableViewDelegate, UITableVi
     
     
     // variabelen
-   var listOfTransport = [Jtransports]()
-   var voertuigen: [String] = []
+   //var listOfTransport = [Jtransports]()
+   //var voertuigen: [String] = []
     
     var listOfMeeting = [Jmeetingen]()
      var meetingen: [String] = []
@@ -31,7 +31,7 @@ public class historyController: UIViewController, UITableViewDelegate, UITableVi
     public override func viewDidLoad()->Void{
         //print("okeoke");
         print(gekozenVoertuig.naam);
-        getTransportsFromApi();
+       // getTransportsFromApi();
         getMeetingenFromApi();
         
         super.viewDidLoad()
@@ -44,7 +44,7 @@ public class historyController: UIViewController, UITableViewDelegate, UITableVi
        
     //init testers
     }
-  
+  /*
           func getTransportsFromApi(){
                  do{
                     let tRequest = TransportRequest()
@@ -67,7 +67,7 @@ public class historyController: UIViewController, UITableViewDelegate, UITableVi
                      print("Error , no item in database")
                  }
              }
-    
+    */
 
     func getMeetingenFromApi(){
                    do{
@@ -80,7 +80,7 @@ public class historyController: UIViewController, UITableViewDelegate, UITableVi
                         self!.listOfMeeting = me
                               for m in self!.listOfMeeting{
                                 print("oke" + String(m.iDvervoer))
-                                self!.meetingen.append(String(m.datum.prefix(10)) + " verbuik: " + String(m.verbruik))
+                                self!.meetingen.append(String(m.datum.prefix(10)) + " verbuik: " + String(m.verbruik) +  " km: " + String(m.km))
                                    self!.tableView.reloadData()
                            }
                           }

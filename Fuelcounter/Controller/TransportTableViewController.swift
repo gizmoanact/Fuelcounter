@@ -62,7 +62,7 @@ public class transportTableViewController:UIViewController, UITableViewDelegate,
     performSegue(withIdentifier: "transportNaarNieuweMeeting", sender: listOfTransport[indexPath.row])
         
     }else if(volgendeView=="TransportNaarHistory"){
-        print("ptn " + String(listOfTransport[indexPath.row].id))
+        
     performSegue(withIdentifier: "TransportNaarHistory", sender: listOfTransport[indexPath.row])
        
     }else {

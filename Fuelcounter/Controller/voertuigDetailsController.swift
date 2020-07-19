@@ -32,13 +32,13 @@ public class voertuigDetailsController : UIViewController {
         //set up picker
        
     //init testers
-    print("okeoke")
+   // print("okeoke")
         getTransportsFromApi()
             naamlbl.text =  gekozenVoertuig.naam
             typelbl.text = gekozenVoertuig.type
             kmlbl.text =  String(gekozenVoertuig.km)
             gemverlbl.text = String(gekozenVoertuig.gemverbruik)// haal alle data om gemiddelde te maken
-            //bouwjaarlbl.text = String(gekozenVoertuig.bouwjaar)
+            bouwjaarlbl.text = String(gekozenVoertuig.bouwjaar)
 
     }
     func getTransportsFromApi(){
@@ -49,7 +49,7 @@ public class voertuigDetailsController : UIViewController {
                 print(error)
             case .success(let tr):
                 self!.listOfTransport = tr
-                print("perfect")
+               // print("perfect")
                 print(self!.listOfTransport[0].naam)
             }
             
