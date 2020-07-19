@@ -7,23 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B625D29E248B962E00773D59 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B625D29D248B962E00773D59 /* MainNavigationController.swift */; };
+		B625D2A0248B9DC000773D59 /* StructuurVariabelen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B625D29F248B9DC000773D59 /* StructuurVariabelen.swift */; };
+		B625D2AC248BD4A700773D59 /* AddTransportmiddelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B625D2AB248BD4A700773D59 /* AddTransportmiddelController.swift */; };
+		B625D2AE248BE10700773D59 /* AddMetingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B625D2AD248BE10700773D59 /* AddMetingController.swift */; };
+		B650A17724923DC20043A443 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650A17624923DC10043A443 /* Validation.swift */; };
+		B6646E4724C0934300EF3E52 /* MeetingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6646E4624C0934300EF3E52 /* MeetingRequest.swift */; };
+		B668210F248BF0C600F7D88E /* TransportTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B668210E248BF0C600F7D88E /* TransportTableViewController.swift */; };
+		B6682116248D2D3B00F7D88E /* apiConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6682115248D2D3B00F7D88E /* apiConnection.swift */; };
+		B6682118248E2B1F00F7D88E /* ApiStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6682117248E2B1F00F7D88E /* ApiStruct.swift */; };
+		B668211B248E2C1500F7D88E /* TransportRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B668211A248E2C1500F7D88E /* TransportRequest.swift */; };
+		B668211E248E685700F7D88E /* TransportRequest.swift in Resources */ = {isa = PBXBuildFile; fileRef = B668211A248E2C1500F7D88E /* TransportRequest.swift */; };
+		B6682120248E685700F7D88E /* apiConnection.swift in Resources */ = {isa = PBXBuildFile; fileRef = B6682115248D2D3B00F7D88E /* apiConnection.swift */; };
+		B66F18E5249E246C00F2E490 /* voertuigDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66F18E4249E246C00F2E490 /* voertuigDetailsController.swift */; };
 		B6B42C6A248A76F4007E8582 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B42C69248A76F4007E8582 /* AppDelegate.swift */; };
 		B6B42C6C248A76F4007E8582 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B42C6B248A76F4007E8582 /* SceneDelegate.swift */; };
-		B6B42C6E248A76F4007E8582 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B42C6D248A76F4007E8582 /* ViewController.swift */; };
+		B6B42C6E248A76F4007E8582 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B42C6D248A76F4007E8582 /* BaseViewController.swift */; };
 		B6B42C71248A76F4007E8582 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6B42C6F248A76F4007E8582 /* Main.storyboard */; };
 		B6B42C73248A76F7007E8582 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6B42C72248A76F7007E8582 /* Assets.xcassets */; };
 		B6B42C76248A76F7007E8582 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6B42C74248A76F7007E8582 /* LaunchScreen.storyboard */; };
+		B6D3A22524C347AB002C7E1B /* historyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D3A22424C347AB002C7E1B /* historyController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B625D29D248B962E00773D59 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		B625D29F248B9DC000773D59 /* StructuurVariabelen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructuurVariabelen.swift; sourceTree = "<group>"; };
+		B625D2AB248BD4A700773D59 /* AddTransportmiddelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddTransportmiddelController.swift; path = ../../../AddTransportmiddelController.swift; sourceTree = "<group>"; };
+		B625D2AD248BE10700773D59 /* AddMetingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMetingController.swift; sourceTree = "<group>"; };
+		B650A17624923DC10043A443 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		B6646E4624C0934300EF3E52 /* MeetingRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingRequest.swift; sourceTree = "<group>"; };
+		B668210E248BF0C600F7D88E /* TransportTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportTableViewController.swift; sourceTree = "<group>"; };
+		B6682115248D2D3B00F7D88E /* apiConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiConnection.swift; sourceTree = "<group>"; };
+		B6682117248E2B1F00F7D88E /* ApiStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiStruct.swift; sourceTree = "<group>"; };
+		B668211A248E2C1500F7D88E /* TransportRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportRequest.swift; sourceTree = "<group>"; };
+		B66F18E4249E246C00F2E490 /* voertuigDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = voertuigDetailsController.swift; sourceTree = "<group>"; };
 		B6B42C66248A76F4007E8582 /* Fuelcounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fuelcounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6B42C69248A76F4007E8582 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6B42C6B248A76F4007E8582 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B6B42C6D248A76F4007E8582 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B6B42C6D248A76F4007E8582 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		B6B42C70248A76F4007E8582 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B6B42C72248A76F7007E8582 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6B42C75248A76F7007E8582 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6B42C77248A76F7007E8582 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6D3A22424C347AB002C7E1B /* historyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = historyController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +63,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B625D2A1248BAD8F00773D59 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B625D2AB248BD4A700773D59 /* AddTransportmiddelController.swift */,
+				B6B42C6D248A76F4007E8582 /* BaseViewController.swift */,
+				B625D29D248B962E00773D59 /* MainNavigationController.swift */,
+				B625D2AD248BE10700773D59 /* AddMetingController.swift */,
+				B668210E248BF0C600F7D88E /* TransportTableViewController.swift */,
+				B66F18E4249E246C00F2E490 /* voertuigDetailsController.swift */,
+				B6D3A22424C347AB002C7E1B /* historyController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B625D2A2248BAD9B00773D59 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B625D2A3248BADA700773D59 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B625D29F248B9DC000773D59 /* StructuurVariabelen.swift */,
+				B6682117248E2B1F00F7D88E /* ApiStruct.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B625D2A4248BAEBD00773D59 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B6B42C6F248A76F4007E8582 /* Main.storyboard */,
+				B6B42C74248A76F7007E8582 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B650A17524923DA80043A443 /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+				B650A17624923DC10043A443 /* Validation.swift */,
+			);
+			path = Validation;
+			sourceTree = "<group>";
+		};
+		B6682114248D2CCB00F7D88E /* API */ = {
+			isa = PBXGroup;
+			children = (
+				B6682119248E2C0300F7D88E /* Request */,
+				B6682115248D2D3B00F7D88E /* apiConnection.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		B6682119248E2C0300F7D88E /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				B668211A248E2C1500F7D88E /* TransportRequest.swift */,
+				B6646E4624C0934300EF3E52 /* MeetingRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
 		B6B42C5D248A76F4007E8582 = {
 			isa = PBXGroup;
 			children = (
@@ -56,12 +147,15 @@
 		B6B42C68248A76F4007E8582 /* Fuelcounter */ = {
 			isa = PBXGroup;
 			children = (
+				B650A17524923DA80043A443 /* Validation */,
+				B6682114248D2CCB00F7D88E /* API */,
+				B625D2A4248BAEBD00773D59 /* View */,
+				B625D2A3248BADA700773D59 /* Model */,
+				B625D2A2248BAD9B00773D59 /* Resources */,
+				B625D2A1248BAD8F00773D59 /* Controller */,
 				B6B42C69248A76F4007E8582 /* AppDelegate.swift */,
 				B6B42C6B248A76F4007E8582 /* SceneDelegate.swift */,
-				B6B42C6D248A76F4007E8582 /* ViewController.swift */,
-				B6B42C6F248A76F4007E8582 /* Main.storyboard */,
 				B6B42C72248A76F7007E8582 /* Assets.xcassets */,
-				B6B42C74248A76F7007E8582 /* LaunchScreen.storyboard */,
 				B6B42C77248A76F7007E8582 /* Info.plist */,
 			);
 			path = Fuelcounter;
@@ -125,6 +219,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B668211E248E685700F7D88E /* TransportRequest.swift in Resources */,
+				B6682120248E685700F7D88E /* apiConnection.swift in Resources */,
 				B6B42C76248A76F7007E8582 /* LaunchScreen.storyboard in Resources */,
 				B6B42C73248A76F7007E8582 /* Assets.xcassets in Resources */,
 				B6B42C71248A76F4007E8582 /* Main.storyboard in Resources */,
@@ -138,8 +234,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6B42C6E248A76F4007E8582 /* ViewController.swift in Sources */,
+				B6B42C6E248A76F4007E8582 /* BaseViewController.swift in Sources */,
+				B625D2A0248B9DC000773D59 /* StructuurVariabelen.swift in Sources */,
+				B6D3A22524C347AB002C7E1B /* historyController.swift in Sources */,
+				B6682116248D2D3B00F7D88E /* apiConnection.swift in Sources */,
+				B6646E4724C0934300EF3E52 /* MeetingRequest.swift in Sources */,
+				B668211B248E2C1500F7D88E /* TransportRequest.swift in Sources */,
+				B650A17724923DC20043A443 /* Validation.swift in Sources */,
+				B625D2AC248BD4A700773D59 /* AddTransportmiddelController.swift in Sources */,
+				B66F18E5249E246C00F2E490 /* voertuigDetailsController.swift in Sources */,
+				B625D2AE248BE10700773D59 /* AddMetingController.swift in Sources */,
 				B6B42C6A248A76F4007E8582 /* AppDelegate.swift in Sources */,
+				B668210F248BF0C600F7D88E /* TransportTableViewController.swift in Sources */,
+				B6682118248E2B1F00F7D88E /* ApiStruct.swift in Sources */,
+				B625D29E248B962E00773D59 /* MainNavigationController.swift in Sources */,
 				B6B42C6C248A76F4007E8582 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
