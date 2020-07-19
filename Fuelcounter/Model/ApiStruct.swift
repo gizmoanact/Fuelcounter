@@ -101,15 +101,15 @@ struct MeetingResponse: Decodable{
 }
 struct Jmeetingen:Decodable {
        var id: Int // autogegenereerd maar verplicht
-       var datum: Date // verplicht
-       var IDvervoer: Int //niet verplicht en boven 999 999 niet interessant dus range van 0 tot 999 999
+       var datum: String // verplicht
+       var iDvervoer: Int //niet verplicht en boven 999 999 niet interessant dus range van 0 tot 999 999
        var km:Double //wordt automatisch berkend
        var verbruik:Double //niet verplicht
     init(){
        print("binnen in de init")
                self.id = 0
-               self.datum = Date()
-               self.IDvervoer = 0
+               self.datum = "Test"
+               self.iDvervoer = 0
                self.km = 0
                self.verbruik = 0
           
@@ -149,13 +149,18 @@ struct Uplaodmeeting:Codable {
               
     }
     
-    init(meeting : Jmeetingen){
+    /*init(meeting : Jmeetingen){
        
-        self.datum = meeting.datum
-        self.IDvervoer = meeting.IDvervoer
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd HH:mm"
+        let someDateTime = formatter.date(from: "2016/10/08 22:31")
+
+
+        self.datum = Date()
+        self.IDvervoer = meeting.iDvervoer
         self.km = meeting.km
         self.verbruik = meeting.verbruik
         self.controle = false
-    }
+    }*/
    
 }

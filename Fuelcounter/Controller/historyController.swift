@@ -65,6 +65,7 @@ public class historyController: UIViewController, UITableViewDelegate, UITableVi
                      print("Error , no item in database")
                  }
              }
+    
 
     func getMeetingenFromApi(){
                    do{
@@ -76,8 +77,8 @@ public class historyController: UIViewController, UITableViewDelegate, UITableVi
                           case .success(let me):
                         self!.listOfMeeting = me
                               for m in self!.listOfMeeting{
-                                print("oke" + String(m.IDvervoer))
-                                self!.meetingen.append(String(m.IDvervoer) )
+                                print("oke" + String(m.iDvervoer))
+                                self!.meetingen.append(String(m.datum.prefix(10)) + " verbuik: " + String(m.verbruik) + listOfTransport.first{})
                                    self!.tableView.reloadData()
                            }
                           }
@@ -89,7 +90,7 @@ public class historyController: UIViewController, UITableViewDelegate, UITableVi
                }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-           return self.voertuigen.count
+           return self.meetingen.count
        }
     
          public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -98,7 +99,7 @@ public class historyController: UIViewController, UITableViewDelegate, UITableVi
          let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as! UITableViewCell as UITableViewCell
 
 
-             cell.textLabel?.text = self.voertuigen[indexPath.row]
+             cell.textLabel?.text = self.meetingen[indexPath.row]
 
              return cell
          }
