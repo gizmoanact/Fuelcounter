@@ -38,14 +38,14 @@ public class addMetingController:UIViewController {
                dateMeeting.datePickerMode = UIDatePicker.Mode.date
                let dateFormatter = DateFormatter()
                dateFormatter.dateFormat = "dd MMMM yyyy"
-               let date = dateFormatter.string(from: dateMeeting.date)
+               _ = dateFormatter.string(from: dateMeeting.date)
         // hier km door geven en al maar ook gemiddelde maken van nu gehad en gemiddelde !
         
         let akm:String = aantalKmTxtF.text!
         let al:String = aantalLiterTxtF.text!
         let nieuwe = meeting( datum: dateMeeting.date, IDvoertuig : gekozenVoertuig.id , km: (akm as NSString).doubleValue , verbruikte: (al as NSString).doubleValue)
          let nieuweuploadable = Uplaodmeeting(IDvervoer: gekozenVoertuig.id, km: (akm as NSString).doubleValue, verbruik: (al as NSString).doubleValue)
-        let adder = addMeetingRequest(m: nieuweuploadable)
+        _ = addMeetingRequest(m: nieuweuploadable)
         
         updategemiddelde(al: nieuwe.verbruikte ,km: (akm as NSString).doubleValue)
         
