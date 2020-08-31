@@ -40,7 +40,7 @@
 /* Begin PBXFileReference section */
 		B625D29D248B962E00773D59 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		B625D29F248B9DC000773D59 /* StructuurVariabelen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructuurVariabelen.swift; sourceTree = "<group>"; };
-		B625D2AB248BD4A700773D59 /* AddTransportmiddelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddTransportmiddelController.swift; path = ../../../AddTransportmiddelController.swift; sourceTree = "<group>"; };
+		B625D2AB248BD4A700773D59 /* AddTransportmiddelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTransportmiddelController.swift; sourceTree = "<group>"; };
 		B625D2AD248BE10700773D59 /* AddMetingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMetingController.swift; sourceTree = "<group>"; };
 		B650A17624923DC10043A443 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		B6646E4624C0934300EF3E52 /* MeetingRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingRequest.swift; sourceTree = "<group>"; };
